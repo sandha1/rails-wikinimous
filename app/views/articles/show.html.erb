@@ -1,0 +1,13 @@
+<div class="border-bottom d-flex align-items-center p-3">
+  <h2 class="me-3"><%= @article.title %></h2>
+
+  <%= link_to edit_article_path(@article), class:"me-3" do %>
+  <i class="fa-solid fa-pencil"></i>
+<% end %>
+
+<%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <i class="fa-solid fa-trash"></i>
+<% end %>
+</div>
+
+<p class="pt-3"><%= @article.content %></p>
